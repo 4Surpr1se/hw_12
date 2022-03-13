@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Все посты найденные по запросу {{s}}</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<main>
+
+    <a href="http://127.0.0.1:5000/" class="link">Назад</a>
+
+    <h1>Посты по запросу {{s}}</h1>
+    <hr>
+    <div class="post">
+        {% for item in posts %}
+            <img src={{item.pic}} width="100%" alt="">
+            <p>{{item.content}} </p>
+            <hr>
+        {% endfor %}
+    </div>
+
+    <a href="http://127.0.0.1:5000/post" class="button">Добавить пост</a>
+
+</main>
+</body>
+</html>
